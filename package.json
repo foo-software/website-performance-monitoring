@@ -6,10 +6,10 @@
     "clean": "rimraf dist",
     "build": "babel ./src --out-dir dist",
     "dev": "NODE_ENV=development DEBUG=example-automatic-lighthouse-cd-pipeline:* npm-run-all server",
-    "production": "NODE_ENV=production npm-run-all clean build server:prod",
+    "production": "NODE_ENV=production npm-run-all clean build server:production",
     "server": "babel-node ./src/bin/www",
-    "server:prod": "node ./dist/bin/www",
-    "start": "npm run prod",
+    "server:production": "node ./dist/bin/www",
+    "start": "npm run production",
     "test": "npm run test:unit",
     "test:unit": "./node_modules/.bin/mocha --recursive src/test/unit --require @babel/register",
     "watch": "nodemon"

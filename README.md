@@ -1,6 +1,6 @@
-# Example Automatic Lighthouse Continuous Delivery Foo API Integration
+# Example Lighthouse Audit in a Continuous Delivery Pipeline
 
-Coming soon...
+A simple example of a Foo API triggered Lighthouse audit in a continuous delivery pipeline.
 
 ## Install
 

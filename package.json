@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "clean": "rimraf dist",
-    "build": "babel ./src --out-dir dist",
+    "build": "babel ./src --out-dir dist && cp -R ./src/public ./dist/public",
     "dev": "NODE_ENV=development DEBUG=example-automatic-lighthouse-cd-pipeline:* npm-run-all server",
     "production": "NODE_ENV=production npm-run-all clean build server:production",
     "server": "babel-node ./src/bin/www",

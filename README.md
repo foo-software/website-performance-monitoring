@@ -39,3 +39,7 @@ Related threads [here](https://stackoverflow.com/questions/36781542/package-json
 > This is just an oddity of Heroku
 
 🔥"This is fine" 🔥
+
+## circleci
+
+Follow [these instructions](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project) for adding environment variables.

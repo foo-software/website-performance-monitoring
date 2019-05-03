@@ -1,5 +1,6 @@
 # Example Automatic Lighthouse Continuous Delivery Foo API Integration
 
+Coming soon...
 
 ## Install
 

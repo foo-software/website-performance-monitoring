@@ -6,12 +6,5 @@
  * @return {undefined}
  */
 export default async (req, res) => {
-  const time = () => (new Promise((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, 3000);
-  }));
-
-  await time();
   res.render('index.html');
 };

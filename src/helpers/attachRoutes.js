@@ -6,7 +6,7 @@ import indexRouter from '../routes';
  * @param {string} app An instance of Express.
  */
 export default (app) => {
-  app.get('/index', indexRouter);
+  app.get('/', indexRouter);
 
   // 404
   app.use((req, res) => {

@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "clean": "rimraf dist",
-    "build": "babel ./src --out-dir dist && cp -R ./src/public ./dist/public",
+    "copy-static": "cp -R ./src/public ./dist/public && cp -R ./src/views ./dist/views",
+    "build": "babel ./src --out-dir dist && npm-run-all copy-static",
     "dev": "NODE_ENV=development DEBUG=example-automatic-lighthouse-cd-pipeline:* npm-run-all server",
     "production": "NODE_ENV=production npm-run-all clean build server:production",
     "server": "babel-node ./src/bin/www",
     "server:production": "node ./dist/bin/www",
-    "start": "npm run production",
-    "test": "npm run test:unit",
+    "start": "npm-run-all production",
+    "test": "npm-run-all test:unit",
     "test:unit": "./node_modules/.bin/mocha --recursive src/test/unit --require @babel/register",
     "watch": "nodemon"
   },

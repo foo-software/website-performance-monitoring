@@ -4,7 +4,7 @@
 
 An informative website for providing a guide to web page performance and performance measuring. We take a look at what it means and some important website performance metrics.
 
-On [www.website-performance-monitoring.info](http://www.website-performance-monitoring.info) we ask answer some questions and ponder on the subject of website performance.
+On [www.website-performance-monitoring.org](http://www.website-performance-monitoring.org) we ask answer some questions and ponder on the subject of website performance.
 
 - What is Website Performance?
 - What are Website Performance Metrics?
@@ -13,7 +13,7 @@ On [www.website-performance-monitoring.info](http://www.website-performance-moni
 
 ## Continuous Integration / Continuous Delivery
 
-This repo also serves as an example of how one could communicate with [Foo's public REST API](https://www.foo.software/docs/api/Methods.html), as part of a pipeline. With our [circleci configuration](./.circleci/config.yml), we curl the endpoint to trigger a performance audit on [www.website-performance-monitoring.info](http://www.website-performance-monitoring.info). We do this as a post-deploy step, so that we essentially run a performance regression test after every deploy.
+This repo also serves as an example of how one could communicate with [Foo's public REST API](https://www.foo.software/docs/api/Methods.html), as part of a pipeline. With our [circleci configuration](./.circleci/config.yml), we curl the endpoint to trigger a performance audit on [www.website-performance-monitoring.org](http://www.website-performance-monitoring.org). We do this as a post-deploy step, so that we essentially run a performance regression test after every deploy.
 
 ## How to Run and Deploy the App
 

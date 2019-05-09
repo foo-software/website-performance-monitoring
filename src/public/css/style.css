@@ -111,6 +111,7 @@ section {
 #hero {
   min-height: 300px;
   box-sizing: border-box;
+  margin-bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,6 +125,7 @@ section {
 
 #hero h1 {
   color: #ffffff;
+  text-shadow: rgb(150, 150, 150) 0px 0px 5px;
   margin-bottom: 0;
   width: 100%;
   font-size: 2.6rem;

@@ -9,7 +9,7 @@ import app from '../app';
 import debugLib from 'debug';
 import http from 'http';
 
-const debug = debugLib('example-automatic-lighthouse-cd-pipeline:server');
+const debug = debugLib('website-performance-monitoring:server');
 
 /**
  * Get port from environment and store in Express.

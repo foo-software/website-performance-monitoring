@@ -1,12 +1,12 @@
 {
-  "name": "example-automatic-lighthouse-cd-pipeline",
+  "name": "website-performance-monitoring",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "clean": "rimraf dist",
     "copy-static": "cp -R ./src/public ./dist/public && cp -R ./src/views ./dist/views",
     "build": "babel ./src --out-dir dist && npm-run-all copy-static",
-    "dev": "NODE_ENV=development DEBUG=example-automatic-lighthouse-cd-pipeline:* npm-run-all server",
+    "dev": "NODE_ENV=development DEBUG=website-performance-monitoring:* npm-run-all server",
     "production": "NODE_ENV=production npm-run-all clean build server:production",
     "server": "babel-node ./src/bin/www",
     "server:production": "node ./dist/bin/www",

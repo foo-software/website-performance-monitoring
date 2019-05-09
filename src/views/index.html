@@ -1,9 +1,92 @@
 <html>
   <head>
-    <title>Measuring Website Performance</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="www.website-performance-monitoring.info is an informative website for providing a guide to web page performance and performance measuring. We take a look at what it means and some important website performance metrics." />
+    <meta property="og:description" content="An informative website for providing a guide to web page performance and performance measuring. We take a look at what it means and some important website performance metrics." />
+    <meta property="og:site_name" content="www.website-performance-monitoring.info | an Informative Guide About Website and Web Page Performance"/>
+    <meta property="og:title" content="A Guide to Website Performance Monitoring, What is Website Performance, How to Monitor a Website with Performance Testing and Reporting" />
+    <meta property="og:url" content="http://www.website-performance-monitoring.info"/>
+    <meta property="twitter:description" content="An informative website for providing a guide to web page performance and performance measuring. We take a look at what it means and some important website performance metrics."/>
+    <meta property="twitter:image" content="https://s3.amazonaws.com/foo.software/images/marketing/website-performance-monitoring-birds-eye-view.jpg"/>
+    <meta property="twitter:title" content="A Tool for Website Performance Monitoring and Uptime Ping | Foo"/>
+    <meta property="og:image" content="https://s3.amazonaws.com/foo.software/images/marketing/website-performance-monitoring-birds-eye-view.jpg"/>
+    <title>A Guide to Website Performance Monitoring, What is Website Performance, How to Monitor a Website with Performance Testing and Reporting | www.website-performance-monitoring.info</title>
+    <link rel="shortcut icon" href="https://s3.amazonaws.com/foo.software/images/logo-16x16.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://s3.amazonaws.com/foo.software/images/logo-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://s3.amazonaws.com/foo.software/images/logo-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="https://s3.amazonaws.com/foo.software/images/logo-16x16.png"/>
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <h1>Hello world</h1>
+    <section id="hero">
+      <h1>Website Performance Monitoring</h1>
+      <img id="hero__image" src="https://s3.amazonaws.com/foo.software/images/marketing/website-performance-monitoring-birds-eye-view.jpg" alt="A birds eye view, like measuring the performance of a website" />
+      <a href="https://www.foo.software" target="_blank" class="image-link">
+        <img id="logo" src="https://s3.amazonaws.com/foo.software/images/foo-logo-white.png" alt="Foo Logo | White" />
+      </a>
+    </section>
+    <div id="content">
+      <section id="what-is-website-performance">
+        <h2>What is Website Performance?</h2>
+        <p>Typically when we think of web page performance, we think of the time it takes for a page to load. Traditionally, we used JavaScript events on the <code>window</code> object such as <code>DOMContentLoaded</code> and <code>onload</code>. Nowadays, life cycle of a web page load can be thought of more granularly.</p>
+        <blockquote cite="https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics">
+          So rather than measuring load with just one metric, we should be measuring the times of every moment throughout the experience that can have an affect on the user's load <i>perception</i>.
+        </blockquote>
+        <span class="quote-citation">
+          ~ <a href="https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics" target="_blank">
+            User-centric Performance Metrics | Google Developers
+          </a>
+        </span>
+        <p><strong>What do we look for in web page performance testing? What ways can we measure performance?</strong> We can answer these questions more specifically by answering the following questions.</p>
+        <ol>
+          <li>What metrics most accurately measure performance as perceived by a human?</li>
+          <li>How do we measure these metrics on our actual users?</li>
+          <li>How do we interpret our measurements to determine whether an app is "fast"?</li>
+          <li>Once we understand our app's real-user performance, what do we do to prevent regressions and hopefully improve performance in the future?</li>
+        </ol>
+      </section>
+      <section id="what-are-website-performance-metrics">
+        <h2>What are Website Performance Metrics?</h2>
+        <p>We can think of website performance metrics as being "user-centric". When a user goes to a web page, they're typically looking for visual feedback to reassure them everything is working as expected.</p>
+        <p>The metrics below represent important points of the page load life cycle. Each answers questions about the user experience.</p>
+        <ul>
+          <li><strong>First Contentful Paint</strong>: <u>Is it happening?</u> Did the navigation start successfully? Has the server responded?</li>
+          <li><strong>First Meaningful Paint</strong>: <u>Is it useful?</u> Has enough content rendered that users can engage with it?</li>
+          <li><strong>Time to Interactive</strong>: <u>Is it usable?</u> Can users interact with the page, or is it still busy loading?</li>
+          <li><strong>Long Tasks (absence of)</strong>: <u>Is it delightful?</u> Are the interactions smooth and natural, free of lag and jank?</li>
+        </ul>
+      </section>
+      <section id="how-to-performance-test-a-website">
+        <h2>How to Performance Test a Website</h2>
+        <div class="image-with-text">
+          <div>
+            <p>Luckily in our modern age, we have great tools to measure web page performance. <a href="https://developers.google.com/web/tools/lighthouse/" target="_blank">Google Lighthouse</a> for example provides a rich variety of metrics and documentation about them.</p>
+            <blockquote cite="https://developers.google.com/web/tools/lighthouse/">
+              Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, and more.
+            </blockquote>
+            <span class="quote-citation">
+              ~ <a href="https://developers.google.com/web/tools/lighthouse/" target="_blank">
+                Lighthouse | Google Developers
+              </a>
+            </span>
+          </div>
+          <div class="image-with-text__image-container">
+            <img src="https://s3.amazonaws.com/foo.software/images/logos/lighthouse.png" alt="Google Lighthouse Logo" />
+          </div>
+        </div>
+      </section>
+      <section id="how-to-monitor-performance-of-a-website">
+        <h2>How to <i>Monitor</i> Performance Website</h2>
+        <div class="image-with-text image-with-text--image-first">
+          <p><a href="https://www.foo.software" target="_blank">Foo is a website performance monitoring tool</a>. It is listed as an <i>integration</i> among many others in the <a href="https://github.com/GoogleChrome/lighthouse#lighthouse-integrations" target="_blank">Google Lighthouse GitHub docs</a>. Foo provides website performance monitoring so users can correlate a drop or rise in performance score to a certain code change. Foo can also notify of changes via email, Slack, or PagerDuty. It even provides a free public API so you can easily intergrate performance checks into a continuous integration or continuous deployment pipeline.</p>
+          <div class="image-with-text__image-container">
+            <a href="https://www.foo.software" target="_blank" class="image-link">
+              <img src="https://s3.amazonaws.com/foo.software/images/foo-logo.jpg" alt="Foo Logo" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

@@ -56,6 +56,10 @@ blockquote {
   margin: 0;
 }
 
+section {
+  margin-bottom: 1rem;
+}
+
 .quote-citation {
   text-align: right;
   display: block;

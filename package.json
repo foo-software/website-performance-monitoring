@@ -1,7 +1,7 @@
 {
   "name": "website-performance-monitoring",
   "version": "0.0.0",
-  "private": true,
+  "description": "A website to answer questions about what website performance monitoring and testing is. Also, an example continuous delivery web page performance regression test.",
   "keywords": [
     "performance",
     "website",

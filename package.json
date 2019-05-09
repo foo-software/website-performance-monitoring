@@ -2,6 +2,21 @@
   "name": "website-performance-monitoring",
   "version": "0.0.0",
   "private": true,
+  "keywords": [
+    "performance",
+    "website",
+    "lighthouse",
+    "testing",
+    "metrics",
+    "audits",
+    "web page",
+    "web page performance monitoring",
+    "website performance testing",
+    "website performance metrics",
+    "website performance monitoring",
+    "website-performance-monitoring",
+    "website-performance-monitoring.org"
+  ],
   "scripts": {
     "clean": "rimraf dist",
     "copy-static": "cp -R ./src/public ./dist/public && cp -R ./src/views ./dist/views",

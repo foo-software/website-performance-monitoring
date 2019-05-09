@@ -1,3 +1,5 @@
+<img src="https://s3.amazonaws.com/foo.software/images/marketing/website-performance-monitoring-birds-eye-view.jpg" alt="Birds Eye View Performance Monitoring" />
+
 # Website Performance Monitoring
 
 An informative website for providing a guide to web page performance and performance measuring. We take a look at what it means and some important website performance metrics.
@@ -52,3 +54,7 @@ $ heroku config:set NPM_CONFIG_PRODUCTION=false
 #### circleci
 
 Follow [these instructions](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project) for adding environment variables.
+
+## Credits
+
+> <img src="https://s3.amazonaws.com/foo.software/images/logo-200x200.png" width="100" height="100" align="left" /> This package was brought to you by [Foo - a website performance monitoring tool](https://www.foo.software). Create a **free account** with standard performance testing. Automatic website performance testing, uptime checks, charts showing performance metrics by day, month, and year. Foo also provides real time notifications when performance and uptime notifications when changes are detected. Users can integrate email, Slack and PagerDuty notifications.

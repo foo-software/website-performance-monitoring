@@ -31,7 +31,7 @@ workflows:
   version: 2
   test-deploy-post-deploy:
     jobs:
-      - test
+      - test:
         filters:
           branches:
             only: master

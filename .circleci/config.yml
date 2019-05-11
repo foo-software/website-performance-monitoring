@@ -25,22 +25,19 @@ jobs:
           command: |
             curl -X POST "https://www.foo.software/api/v1/queue/items" --insecure \
               -H "accept: application/json" -H "Content-Type: application/json" \
-              -d "{ \"pages\": \"$FOO_PAGE_TOKENS\", \"tag\": \"$CIRCLE_TAG\" }"
+              -d "{ \"pages\": \"$FOO_PAGE_TOKENS\", \"tag\": \"$CIRCLE_BUILD_NUM\" }"
 
 workflows:
   version: 2
   test-deploy-post-deploy:
     jobs:
-      - test:
-        filters:
-          branches:
-            only: master
-          tags:
-            # all tags
-            only: /.*/
+      - test
       - deploy:
           requires:
             - test
+          filters:
+            branches:
+              only: master
       - post-deploy:
           requires:
             - deploy

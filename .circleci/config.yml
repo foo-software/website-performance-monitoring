@@ -32,15 +32,15 @@ workflows:
   test-deploy-post-deploy:
     jobs:
       - test
+        filters:
+          branches:
+            only: master
+          tags:
+            # all tags
+            only: /.*/
       - deploy:
           requires:
             - test
-          filters:
-            branches:
-              only: master
-            tags:
-              # all tags
-              only: /.*/
       - post-deploy:
           requires:
             - deploy

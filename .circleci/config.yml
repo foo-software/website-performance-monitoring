@@ -25,7 +25,7 @@ jobs:
           command: |
             curl -X POST "https://www.foo.software/api/v1/queue/items" --insecure \
               -H "accept: application/json" -H "Content-Type: application/json" \
-              -d "{ \"pages\": \"$FOO_PAGE_TOKENS\", \"tag\": \"Build \#$CIRCLE_BUILD_NUM\" }"
+              -d "{ \"pages\": \"$FOO_PAGE_TOKENS\", \"tag\": \"Build $CIRCLE_BUILD_NUM\" }"
 
 workflows:
   version: 2

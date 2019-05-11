@@ -53,7 +53,7 @@ $ heroku config:set NPM_CONFIG_PRODUCTION=false
 
 #### circleci
 
-Follow [these instructions](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project) for adding environment variables
+Follow [these instructions](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project) for adding environment variables.
 
 ## Credits
 

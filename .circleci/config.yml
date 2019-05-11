@@ -23,7 +23,7 @@ jobs:
       - run:
           name: Run a performance audit
           command: |
-            curl -X POST "https://www.foo.software/api/v1/queue/items" --data-urlencode --insecure \
+            curl -X POST "https://www.foo.software/api/v1/queue/items" --insecure \
               -H "accept: application/json" -H "Content-Type: application/json" \
               -d "{ \"pages\": \"$FOO_PAGE_TOKENS\", \"tag\": \"Build %23$CIRCLE_BUILD_NUM\" }"
 

@@ -13,7 +13,7 @@ On [www.website-performance-monitoring.org](http://www.website-performance-monit
 
 ## Continuous Integration / Continuous Delivery
 
-This repo also serves as an example of how one could communicate with [Foo's public REST API](https://www.foo.software/docs/api/Methods.html), as part of a pipeline. With our [circleci configuration](./.circleci/config.yml), we curl the endpoint to trigger a performance audit on [www.website-performance-monitoring.org](http://www.website-performance-monitoring.org). We do this as a post-deploy step, so that we essentially run a performance regression test after every deploy.
+This repo also serves as an example of how one could communicate with [Foo's `lighthouse-check`]https://github.com/foo-software/lighthouse-check-cli), as part of a pipeline. In our [circleci configuration](./.circleci/config.yml), we utilize the [`lighthouse-check-cli` Docker image](https://cloud.docker.com/u/foosoftware/repository/docker/foosoftware/lighthouse-check-cli) to performance an audit on [www.website-performance-monitoring.org](http://www.website-performance-monitoring.org). We do this as a post-deploy step, so that we essentially run a performance regression test after every deploy.
 
 ## How to Run and Deploy the App
 

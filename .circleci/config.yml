@@ -24,6 +24,7 @@ jobs:
           name: Run a performance audit
           command: |
             lighthouse-check --apiToken $LIGHTHOUSE_CHECK_API_TOKEN --urls $LIGHTHOUSE_CHECK_URLS
+            ls
 
 workflows:
   version: 2

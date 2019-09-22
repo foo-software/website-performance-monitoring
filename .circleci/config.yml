@@ -24,7 +24,11 @@ jobs:
       - run:
           name: Run a performance audit
           command: |
-            lighthouse-check --apiToken $LIGHTHOUSE_CHECK_API_TOKEN --configFile ./lighthouse-check.json
+            lighthouse-check --configFile ./lighthouse-check.json \
+              --awsAccessKeyId $AWS_ACCESS_KEY_ID \
+              --awsBucket $AWS_BUCKET \
+              --awsRegion $AWS_REGION \
+              --awsSecretAccessKey $AWS_SECRET_ACCESS_KEY
 
 workflows:
   version: 2

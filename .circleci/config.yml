@@ -20,6 +20,7 @@ jobs:
     docker:
       - image: foosoftware/lighthouse-check-cli:latest
     steps:
+      - checkout
       - run:
           name: Run a performance audit
           command: |

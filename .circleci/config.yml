@@ -17,7 +17,6 @@ jobs:
           command: |
             git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
   post-deploy:
-    working_directory: ~/website-performance-monitoring
     docker:
       - image: foosoftware/lighthouse-check-cli:latest
     steps:
@@ -25,7 +24,6 @@ jobs:
           name: Run a performance audit
           command: |
             lighthouse-check --apiToken $LIGHTHOUSE_CHECK_API_TOKEN --urls $LIGHTHOUSE_CHECK_URLS
-            ls
 
 workflows:
   version: 2

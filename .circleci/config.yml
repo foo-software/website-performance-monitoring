@@ -18,14 +18,12 @@ jobs:
             git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
   post-deploy:
     docker:
-      - image: circleci/buildpack-deps:jessie-curl
+      - image: foosoftware/lighthouse-check-cli:latest
     steps:
       - run:
           name: Run a performance audit
           command: |
-            curl -X POST "https://www.foo.software/api/v1/queue/items" --insecure \
-              -H "accept: application/json" -H "Content-Type: application/json" \
-              -d "{ \"pages\": \"$FOO_PAGE_TOKENS\", \"tag\": \"Build %23$CIRCLE_BUILD_NUM\" }"
+            lighthouse-check --apiToken $LIGHTHOUSE_CHECK_API_TOKEN --urls $LIGHTHOUSE_CHECK_URLS
 
 workflows:
   version: 2

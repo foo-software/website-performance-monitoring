@@ -26,12 +26,16 @@ jobs:
           command: |
             mkdir /tmp/artifacts
             lighthouse-check --verbose \
-              --configFile ./lighthouse-check.json \
-              --outputDirectory /tmp/artifacts \
+              --author $CIRCLE_USERNAME \
               --awsAccessKeyId $AWS_ACCESS_KEY_ID \
               --awsBucket $AWS_BUCKET \
               --awsRegion $AWS_REGION \
               --awsSecretAccessKey $AWS_SECRET_ACCESS_KEY \
+              --branch $CIRCLE_BRANCH \
+              --configFile ./lighthouse-check.json \
+              --outputDirectory /tmp/artifacts \
+              --pr $CIRCLE_PULL_REQUEST \
+              --sha $CIRCLE_SHA1 \
               --slackWebhookUrl $SLACK_WEBHOOK_URL \
       - store_artifacts:
           path: /tmp/artifacts

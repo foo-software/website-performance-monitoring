@@ -22,14 +22,18 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Run a performance audit
+          name: Run a performance audit and save results
           command: |
+            mkdir /tmp/artifacts
             lighthouse-check --verbose \
               --configFile ./lighthouse-check.json \
+              --outputDirectory /tmp/artifacts \
               --awsAccessKeyId $AWS_ACCESS_KEY_ID \
               --awsBucket $AWS_BUCKET \
               --awsRegion $AWS_REGION \
               --awsSecretAccessKey $AWS_SECRET_ACCESS_KEY
+      - store_artifacts:
+          path: /tmp/artifacts
 
 workflows:
   version: 2

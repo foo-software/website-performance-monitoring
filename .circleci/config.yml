@@ -22,7 +22,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Run performance audits and save results
+          name: Run Lighthouse audits and save results
           command: |
             mkdir /tmp/artifacts
             lighthouse-check --verbose \

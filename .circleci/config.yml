@@ -31,7 +31,8 @@ jobs:
               --awsAccessKeyId $AWS_ACCESS_KEY_ID \
               --awsBucket $AWS_BUCKET \
               --awsRegion $AWS_REGION \
-              --awsSecretAccessKey $AWS_SECRET_ACCESS_KEY
+              --awsSecretAccessKey $AWS_SECRET_ACCESS_KEY \
+              --slackWebhookURl $SLACK_WEBHOOK_URL
       - store_artifacts:
           path: /tmp/artifacts
 

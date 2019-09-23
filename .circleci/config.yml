@@ -22,7 +22,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Run Lighthouse audits and save results
+          name: Run Lighthouse Audits and Save Results
           command: |
             mkdir /tmp/artifacts
             lighthouse-check --verbose \
@@ -38,6 +38,7 @@ jobs:
               --sha $CIRCLE_SHA1 \
               --slackWebhookUrl $SLACK_WEBHOOK_URL \
       - store_artifacts:
+          name: Store Artifacts
           path: /tmp/artifacts
 
 workflows:

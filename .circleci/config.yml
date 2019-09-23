@@ -24,7 +24,8 @@ jobs:
       - run:
           name: Run a performance audit
           command: |
-            lighthouse-check --configFile ./lighthouse-check.json \
+            lighthouse-check --verbose \
+              --configFile ./lighthouse-check.json \
               --awsAccessKeyId $AWS_ACCESS_KEY_ID \
               --awsBucket $AWS_BUCKET \
               --awsRegion $AWS_REGION \

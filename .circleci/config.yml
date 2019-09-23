@@ -32,7 +32,7 @@ jobs:
               --awsBucket $AWS_BUCKET \
               --awsRegion $AWS_REGION \
               --awsSecretAccessKey $AWS_SECRET_ACCESS_KEY \
-              --slackWebhookURl $SLACK_WEBHOOK_URL
+              --slackWebhookURl $SLACK_WEBHOOK_URL \
       - store_artifacts:
           path: /tmp/artifacts
 

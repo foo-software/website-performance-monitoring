@@ -3,29 +3,25 @@ version: 2.1
 orbs:
   lighthouse-check: foo-software/lighthouse-check@0.0.1
 
-jobs:
-  test:
-    docker:
-      - image: circleci/node:10.15.0
-    steps:
-      - checkout
-      - run: npm install
-      - run: npm run test
-  deploy:
-    docker:
-      - image: buildpack-deps:trusty
-    steps:
-      - checkout
-      - run:
-          name: Deploy Master to Heroku
-          command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
-
 workflows:
   test-deploy-post-deploy:
     jobs:
-      - test
+      - test:
+          docker:
+            - image: circleci/node:10.15.0
+          steps:
+            - checkout
+            - run: npm install
+            - run: npm run test
       - deploy:
+          docker:
+            - image: buildpack-deps:trusty
+          steps:
+            - checkout
+            - run:
+                name: Deploy Master to Heroku
+                command: |
+                  git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
           requires:
             - test
           filters:

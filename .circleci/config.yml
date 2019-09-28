@@ -1,4 +1,8 @@
-version: 2
+version: 2.1
+
+orbs:
+  lighthouse-check: foo-software/lighthouse-check@0.0.1
+
 jobs:
   test:
     docker:
@@ -16,33 +20,8 @@ jobs:
           name: Deploy Master to Heroku
           command: |
             git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
-  post-deploy:
-    docker:
-      - image: foosoftware/lighthouse-check:latest
-    steps:
-      - checkout
-      - run:
-          name: Run Lighthouse Audits and Save Results
-          command: |
-            mkdir /tmp/artifacts
-            lighthouse-check --verbose \
-              --author $CIRCLE_USERNAME \
-              --awsAccessKeyId $AWS_ACCESS_KEY_ID \
-              --awsBucket $AWS_BUCKET \
-              --awsRegion $AWS_REGION \
-              --awsSecretAccessKey $AWS_SECRET_ACCESS_KEY \
-              --branch $CIRCLE_BRANCH \
-              --configFile ./lighthouse-check.json \
-              --outputDirectory /tmp/artifacts \
-              --pr $CIRCLE_PULL_REQUEST \
-              --sha $CIRCLE_SHA1 \
-              --slackWebhookUrl $SLACK_WEBHOOK_URL \
-      - store_artifacts:
-          name: Store Artifacts
-          path: /tmp/artifacts
 
 workflows:
-  version: 2
   test-deploy-post-deploy:
     jobs:
       - test
@@ -53,5 +32,17 @@ workflows:
             branches:
               only: master
       - post-deploy:
+          steps:
+            - checkout
+            - lighthouse-check/audit:
+                configFile: "./lighthouse-check.json"
+                awsAccessKeyId: $AWS_ACCESS_KEY_ID
+                awsBucket: $AWS_BUCKET
+                awsRegion: $AWS_REGION
+                awsSecretAccessKey: $AWS_SECRET_ACCESS_KEY
+                slackWebhookUrl: $SLACK_WEBHOOK_URL
           requires:
             - deploy
+          filters:
+            branches:
+              only: master
